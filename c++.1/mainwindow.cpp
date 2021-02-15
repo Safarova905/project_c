@@ -69,7 +69,7 @@ void MainWindow::on_submitPushButton_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    User::users_.erase(User::users_.begin()+ui->lineEdit->text().toInt());
+    User::users_.erase(User::users_.begin()+ui->nameLabel->text().toInt());
     QMessageBox msg(QMessageBox::Information,"Delete student!",
                     "Index"+ui->lineEdit->text()+" was deleted");
     qDebug() << msg.exec();
